@@ -1,0 +1,15 @@
+.film {
+	border: 1px solid var(--gray);
+	border-radius: 20rem;
+	width: 255rem;
+	height: 301rem;
+	padding: 20rem;
+	gap: 20rem;
+}
+.checkpoint {
+	display: flex;
+	justify-content: end;
+	text-align: left;
+	max-width: 256rem;
+	margin-inline: end;
+}

@@ -1,0 +1,11 @@
+.home {
+	background: url('/src/assets/Homescreen.png');
+	background-size: cover;
+	background-position: center;
+}
+.like {
+	border-radius: 14rem;
+	padding: 15rem;
+	backdrop-filter: blur(20px);
+	background: linear-gradient(147deg, #fff 0%, #fff 100%);
+}
