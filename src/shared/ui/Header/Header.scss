@@ -1,5 +1,17 @@
 .header {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	padding: 40px 42px 65px 32px;
+	font-weight: 500;
+	font-size: 16rem;
+	line-height: 112%;
+}
+.header__link {
+	display: flex;
+	gap: 32rem;
+}
+.user__link{
+	display: flex;
+	gap: 24rem;
 }

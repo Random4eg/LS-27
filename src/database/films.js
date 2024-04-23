@@ -29,6 +29,9 @@ export const films = [
 		image: '/src/assets/image/HouseOfGucci.png',
 		year: '2021',
 		genre: 'Drama',
+		// description: 'The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion,
+		// luxurious cars, and expensive designer clothing.However, behind the facade of their lavish lifestyle, there are deep-
+		// seated tensions and secrets that threaten to tear the family apart.',
 		isFavorited: false
 	}
 ]

@@ -1,11 +1,54 @@
 .home {
+	padding-left: 32rem;
+}
+.home-container {
 	background: url('/src/assets/Homescreen.png');
 	background-size: cover;
 	background-position: center;
 }
-.like {
+.card {
+	margin-top: 100rem;
+	padding-bottom: 53rem;
+}
+.title {
+	font-weight: 600;
+	font-size: 48rem;
+	line-height: 100%;
+	margin-bottom: 20rem;
+}
+.desc {
+	font-weight: 400;
+	font-size: 14rem;
+	line-height: 143%;
+	margin-bottom: 20rem;
+}
+.btn {
+	display: flex;
+	align-items: center;
+	gap: 16rem;
+}
+.home__btn {
 	border-radius: 14rem;
-	padding: 15rem;
+	padding: 17rem 24rem;
+	color: var(--white);
+	background: var(--purple);
+	border: 0;
+}
+.biglike {
+	border-radius: 14rem;
+	padding: 11rem;
 	backdrop-filter: blur(20px);
 	background: linear-gradient(147deg, #fff 0%, #fff 100%);
+	border: 0;
+}
+.watch-box {
+	display: flex;
+	justify-content: space-between;
+}
+.watch-item {
+	border: 1px solid var(--grey);
+	border-radius: 20rem;
+	width: 348rem;
+	height: 209rem;
+	background: #fff;
 }
