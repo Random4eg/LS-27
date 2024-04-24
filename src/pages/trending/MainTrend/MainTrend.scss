@@ -1,0 +1,25 @@
+.mt-box {
+	display: flex;
+	margin-top: 56rem;
+	gap: 24rem;
+	align-items: center;
+}
+.print {
+	max-width: 500rem;
+}
+.trend-box {
+	width: 500rem;
+}
+.title-star {
+	display: flex;
+	justify-content: space-between;
+}
+.title {
+	font-weight: 600;
+	font-size: 32rem;
+	line-height: 125%;
+}
+.data {
+	display: flex;
+	gap: 10rem;
+}

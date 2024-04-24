@@ -4,12 +4,16 @@ import '/src/shared/ui/Film/Film.scss'
 import { Likeicon } from '../../icons/Likeicon'
 import { DisLikeicon } from '../../icons/DisLikeicon'
 
-export const Film = ({ film, toggleFavorite }) => {
+export const Film = ({ film, toggleFavorite, toggleActiveFilm }) => {
 	const [isFavorited, setisFavorited] = useState(film.isFavorited)
 
 	const handleLike = () => {
 		toggleFavorite(film.id)
 		setisFavorited(!isFavorited)
+	}
+
+	const handleFilmClick = () => {
+		toggleActiveFilm && toggleActiveFilm(film)
 	}
 
 	useEffect(() => {
@@ -18,12 +22,13 @@ export const Film = ({ film, toggleFavorite }) => {
 
 	return (
 		<div
-			className='film'
+			className={`film ${isFavorited ? 'isFavorited' : ''}`}
 			style={{
 				backgroundImage: `url(${film.image})`,
 				backgroundSize: 'cover',
 				backgroundPosition: 'center'
 			}}
+			onClick={handleFilmClick}
 		>
 			<div className='checkpoint'>
 				<label>
@@ -52,5 +57,8 @@ Film.propTypes = {
 		genre: PropTypes.string.isRequired,
 		isFavorited: PropTypes.bool.isRequired
 	}).isRequired,
-	toggleFavorite: PropTypes.func.isRequired
+	toggleFavorite: PropTypes.func.isRequired,
+	toggleActiveFilm: PropTypes.func
 }
+
+ 

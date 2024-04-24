@@ -37,10 +37,11 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
-				<Link to='/Trending' className='trending'>
+				<Link to='/Trending' className='track'>
 					Trending
-					<div className='trending-list'>{listItems}</div>
 				</Link>
+				<div className='trending-list'>{listItems}</div>
+
 				<Watching />
 			</section>
 		</>

@@ -3,6 +3,14 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 24rem;
 }
+
 .list-box {
 	opacity: 0.3;
+}
+.clicked {
+	opacity: 1;
+}
+.trending-title {
+	font-weight: 600;
+	font-size: 20rem;
 }

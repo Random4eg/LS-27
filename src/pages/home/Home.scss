@@ -41,27 +41,9 @@
 	background: linear-gradient(147deg, #fff 0%, #fff 100%);
 	border: 0;
 }
-.watch-box {
-	display: flex;
-	justify-content: space-between;
-}
-.watch-item {
-	border: 1px solid var(--grey);
-	border-radius: 20rem;
-	width: 348rem;
-	height: 209rem;
-	
-}
-.watch-item:nth-child(1) {
-    background:url(/src/assets/couple.png); 
-}
-
-
-.watch-item:nth-child(2) {
-    background:url(/src/assets/skate.png); 
-}
-
-
-.watch-item:nth-child(3) {
-    background:url(/src/assets/moon.png); 
-}
+// .track {
+// 	font-weight: 600;
+// 	font-size: 20rem;
+// 	margin-top: 15rem;
+// 	margin-bottom: 15rem;
+// }

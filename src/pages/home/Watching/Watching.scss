@@ -1,4 +1,13 @@
-.watch-like{display: flex;justify-content: end;padding: 20rem;}
+.watch-item {
+	width: 300rem;
+	height: 200rem;
+
+}
+.watch-like {
+	display: flex;
+	justify-content: end;
+	padding: 20rem;
+}
 .biglike {
 	border-radius: 14rem;
 	padding: 11rem;
@@ -13,18 +22,15 @@
 .watch-item {
 	border: 1px solid var(--grey);
 	border-radius: 20rem;
-	
 }
 .watch-item:nth-child(1) {
-    background:url(/src/assets/couple.png); 
+	background: url(/src/assets/couple.png);
 }
-
 
 .watch-item:nth-child(2) {
-    background:url(/src/assets/skate.png); 
+	background: url(/src/assets/skate.png);
 }
 
-
 .watch-item:nth-child(3) {
-    background:url(/src/assets/moon.png); 
+	background: url(/src/assets/moon.png);
 }

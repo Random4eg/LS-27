@@ -6,7 +6,11 @@ export let filmsData = [
 		image: '/src/assets/image/TokioTrain.png',
 		year: '2022',
 		genre: 'Action comedy',
-		isFavorited: true
+		isFavorited: true,
+		playback: '1h 45m',
+		description:
+			'The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion, luxurious cars, and expensive designer clothing. However, behind the facade of their lavish lifestyle, there are deep-seated tensions and secrets that threaten to tear the family apart.',
+		star: '7.5/10'
 	},
 	{
 		id: 2,
@@ -14,7 +18,11 @@ export let filmsData = [
 		image: '/src/assets/image/Moonfall.png',
 		year: '2022',
 		genre: 'Sci-fi',
-		isFavorited: true
+		isFavorited: true,
+		playback: '2h 10m',
+		description:
+			'The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion, luxurious cars, and expensive designer clothing. However, behind the facade of their lavish lifestyle, there are deep-seated tensions and secrets that threaten to tear the family apart.',
+		star: '8.0/10'
 	},
 	{
 		id: 3,
@@ -22,7 +30,11 @@ export let filmsData = [
 		image: '/src/assets/image/LifeInParis.png',
 		year: '2023',
 		genre: 'Documentary series',
-		isFavorited: false
+		isFavorited: false,
+		playback: '3h 20m',
+		description:
+			'The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion, luxurious cars, and expensive designer clothing. However, behind the facade of their lavish lifestyle, there are deep-seated tensions and secrets that threaten to tear the family apart.',
+		star: 'N/A'
 	},
 	{
 		id: 4,
@@ -30,7 +42,11 @@ export let filmsData = [
 		image: '/src/assets/image/HouseOfGucci.png',
 		year: '2021',
 		genre: 'Drama',
-		isFavorited: false
+		isFavorited: false,
+		playback: '2h 38m',
+		description:
+			'The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion, luxurious cars, and expensive designer clothing. However, behind the facade of their lavish lifestyle, there are deep-seated tensions and secrets that threaten to tear the family apart.',
+		star: '7.8/10'
 	}
 ]
 
@@ -42,19 +58,6 @@ export function toggleFavorite(filmId) {
 		return film
 	})
 }
-
-// 	{
-// 		id: 4,
-// 		title: 'House of Gucci',
-// 		image: '/src/assets/image/HouseOfGucci.png',
-// 		year: '2021',
-// 		genre: 'Drama',
-// 		// description: 'The movie follows the lives of a wealthy family, the Johnsons, who appear to have it all: a grand mansion,
-// 		// luxurious cars, and expensive designer clothing.However, behind the facade of their lavish lifestyle, there are deep-
-// 		// seated tensions and secrets that threaten to tear the family apart.',
-// 		isFavorited: true
-// 	}
-// ]
 
 // {
 // 	id: 1,
