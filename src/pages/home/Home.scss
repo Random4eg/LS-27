@@ -50,5 +50,18 @@
 	border-radius: 20rem;
 	width: 348rem;
 	height: 209rem;
-	background: #fff;
+	
+}
+.watch-item:nth-child(1) {
+    background:url(/src/assets/couple.png); 
+}
+
+
+.watch-item:nth-child(2) {
+    background:url(/src/assets/skate.png); 
+}
+
+
+.watch-item:nth-child(3) {
+    background:url(/src/assets/moon.png); 
 }

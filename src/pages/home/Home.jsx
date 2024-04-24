@@ -7,6 +7,7 @@ import { BigDislikeIcon } from '../../shared/icons/BigDislikeIcon'
 import { BigLikeIcon } from '../../shared/icons/BigLikeIcon'
 import '/src/pages/home/Home.scss'
 import { Link } from 'react-router-dom'
+import { Watching } from './Watching/Watching'
 
 export const Home = () => {
 	const [isFavorited, setIsFavorited] = useState(false)
@@ -40,26 +41,7 @@ export const Home = () => {
 					Trending
 					<div className='trending-list'>{listItems}</div>
 				</Link>
-				<section className='main-trend'>
-					Continue watching
-					<div className='watch-box'>
-						<div className='watch-item'>
-							<button className='biglike' onClick={toggleLike}>
-								{likeIcon}
-							</button>
-						</div>
-						<div className='watch-item'>
-							<button className='biglike' onClick={toggleLike}>
-								{likeIcon}
-							</button>
-						</div>
-						<div className='watch-item'>
-							<button className='biglike' onClick={toggleLike}>
-								{likeIcon}
-							</button>
-						</div>
-					</div>
-				</section>
+				<Watching />
 			</section>
 		</>
 	)

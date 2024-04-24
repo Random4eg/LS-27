@@ -17,18 +17,20 @@ export const Film = ({ film, toggleFavorite }) => {
 	}, [film.isFavorited])
 
 	return (
-		<div className='film'>
-			<div
-				className='film-image'
-				style={{ backgroundImage: `url(${film.image})` }}
-			>
-				<div className='checkpoint'>
-					<label>
-						<button className='light' onClick={handleLike}>
-							{isFavorited ? <Likeicon /> : <DisLikeicon />}
-						</button>
-					</label>
-				</div>
+		<div
+			className='film'
+			style={{
+				backgroundImage: `url(${film.image})`,
+				backgroundSize: 'cover',
+				backgroundPosition: 'center'
+			}}
+		>
+			<div className='checkpoint'>
+				<label>
+					<button className='light' onClick={handleLike}>
+						{isFavorited ? <Likeicon /> : <DisLikeicon />}
+					</button>
+				</label>
 			</div>
 			<div className='film-info'>
 				<div className='film-title'>{film.title}</div>

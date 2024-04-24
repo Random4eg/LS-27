@@ -24,10 +24,12 @@ export const Favorites = () => {
 
 	return (
 		<>
-			<Header />
-			<div className='favorites'>
-				<div className='title'>Favorites</div>
-				<div className='favorites-list'>{listItems}</div>
+			<div className='favorites-box'>
+				<Header />
+				<div className='favorites'>
+					<div className='title'>Favorites</div>
+					<div className='favorites-list'>{listItems}</div>
+				</div>
 			</div>
 		</>
 	)
