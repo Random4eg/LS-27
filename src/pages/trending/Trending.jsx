@@ -7,7 +7,7 @@ import { MainTrend } from './MainTrend/MainTrend'
 export const Trending = () => {
 	const [activeFilm, setActiveFilm] = useState(null)
 	const [listOpacity, setListOpacity] = useState(0.3)
-	const [isClicked, setIsClicked] = useState(false) // Додали стан для зберігання інформації про клік
+	const [isClicked, setIsClicked] = useState(false)
 
 	const handleToggleActiveFilm = film => {
 		setActiveFilm(film)
@@ -28,7 +28,7 @@ export const Trending = () => {
 
 	const handleListClick = () => {
 		setListOpacity(1)
-		setIsClicked(true) // Встановлюємо значення true при кліку
+		setIsClicked(true)
 	}
 
 	const handleListHover = () => {
@@ -37,7 +37,7 @@ export const Trending = () => {
 
 	const handleListLeave = () => {
 		setListOpacity(1)
-		setIsClicked(false) // Встановлюємо значення false при відведенні миші від елементу
+		setIsClicked(false)
 	}
 
 	const listItems = filmsData.map(film => (
@@ -56,7 +56,7 @@ export const Trending = () => {
 			<div className='trending'>
 				<div className='trending-title'>Trending at this moment</div>
 				<div
-					className={`list-box ${isClicked ? 'clicked' : ''}`} // Додаємо клас 'clicked', якщо isClicked === true
+					className={`list-box ${isClicked ? 'clicked' : ''}`}
 					onClick={handleListClick}
 					onMouseEnter={handleListHover}
 					onMouseLeave={handleListLeave}
