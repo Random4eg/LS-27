@@ -1,34 +1,32 @@
 // Favorites.jsx
 import React, { useState } from 'react'
 import { Header } from '../../shared/ui/Header/Header'
-import {Film} from '../../shared/ui/Film/Film' // Користуємось імпортом без фігурних дужок для Film
-import { films } from '../../database/films'
+import { Film } from '../../shared/ui/Film/Film'
+import { filmsData, toggleFavorite } from '../../database/films'
 
 export const Favorites = () => {
-	const [favoriteFilms, setFavoriteFilms] = useState([])
+	const [favoriteFilms, setFavoriteFilms] = useState(
+		filmsData.filter(film => film.isFavorited)
+	)
 
-	const toggleFavorite = (filmId, isFavorite) => {
+	const handleToggleFavorite = (filmId, isFavorite) => {
+		toggleFavorite(filmId)
 		if (isFavorite) {
-			setFavoriteFilms([...favoriteFilms, filmId])
-		} else {
 			setFavoriteFilms(favoriteFilms.filter(id => id !== filmId))
+		} else {
+			setFavoriteFilms([...favoriteFilms, filmId])
 		}
 	}
 
-	const listItems = films.map(film => (
-		<Film
-			key={film.id}
-			film={film}
-			isFavorite={favoriteFilms.includes(film.id)}
-			onToggleFavorite={toggleFavorite}
-		/>
+	const listItems = favoriteFilms.map(film => (
+		<Film key={film.id} film={film} toggleFavorite={toggleFavorite} />
 	))
 
 	return (
 		<>
 			<Header />
 			<div className='favorites'>
-				<div className='title'>Favourites</div>
+				<div className='title'>Favorites</div>
 				<div className='favorites-list'>{listItems}</div>
 			</div>
 		</>

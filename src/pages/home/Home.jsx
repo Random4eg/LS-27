@@ -1,6 +1,7 @@
+// Home.jsx
 import React, { useState } from 'react'
 import { Film } from '../../shared/ui/Film/Film'
-import { films } from '../../database/films'
+import { filmsData, toggleFavorite } from '../../database/films'
 import { Header } from '../../shared/ui/Header/Header'
 import { BigDislikeIcon } from '../../shared/icons/BigDislikeIcon'
 import { BigLikeIcon } from '../../shared/icons/BigLikeIcon'
@@ -8,13 +9,16 @@ import '/src/pages/home/Home.scss'
 import { Link } from 'react-router-dom'
 
 export const Home = () => {
-	const [isLiked, setIsLiked] = useState(false)
+	const [isFavorited, setIsFavorited] = useState(false)
 
 	const toggleLike = () => {
-		setIsLiked(!isLiked)
+		setIsFavorited(!isFavorited)
 	}
-	const likeIcon = isLiked ? <BigLikeIcon /> : <BigDislikeIcon />
-	const listItems = films.map(film => <Film key={film.id} film={film} />)
+
+	const likeIcon = isFavorited ? <BigLikeIcon /> : <BigDislikeIcon />
+	const listItems = filmsData.map(film => (
+		<Film key={film.id} film={film} toggleFavorite={toggleFavorite} />
+	))
 
 	return (
 		<>
@@ -33,7 +37,6 @@ export const Home = () => {
 					</div>
 				</div>
 				<Link to='/Trending' className='trending'>
-					{' '}
 					Trending
 					<div className='trending-list'>{listItems}</div>
 				</Link>
