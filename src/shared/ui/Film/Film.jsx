@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import '/src/shared/ui/Film/Film.scss'
 import { Likeicon } from '../../icons/Likeicon'
@@ -60,5 +60,3 @@ Film.propTypes = {
 	toggleFavorite: PropTypes.func.isRequired,
 	toggleActiveFilm: PropTypes.func
 }
-
- 

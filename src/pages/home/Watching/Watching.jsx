@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import './Watching.scss'
 import { BigLikeIcon } from '../../../shared/icons/BigLikeIcon'

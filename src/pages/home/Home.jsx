@@ -1,5 +1,5 @@
 // Home.jsx
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Film } from '../../shared/ui/Film/Film'
 import { filmsData, toggleFavorite } from '../../database/films'
 import { Header } from '../../shared/ui/Header/Header'

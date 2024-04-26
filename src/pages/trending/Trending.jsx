@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Header } from '../../shared/ui/Header/Header'
 import { Film } from '../../shared/ui/Film/Film'
 import { filmsData } from '../../database/films'
@@ -11,18 +11,10 @@ export const Trending = () => {
 
 	const handleToggleActiveFilm = film => {
 		setActiveFilm(film)
+		film.isFavorited = true
 	}
 
-	const handleToggleFavorite = filmId => {
-		const updatedFilmsData = filmsData.map(film => {
-			if (film.id === filmId) {
-				return {
-					...film,
-					isFavorited: !film.isFavorited
-				}
-			}
-			return film
-		})
+	const handleToggleFavorite = () => {
 		setActiveFilm(null)
 	}
 

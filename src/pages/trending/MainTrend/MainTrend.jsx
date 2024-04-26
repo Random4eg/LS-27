@@ -1,5 +1,5 @@
 // MainTrend.jsx
-import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import '/src/pages/trending/MainTrend/MainTrend.scss'
 import { StarIcon } from '../../../shared/icons/StarIcon'
 
@@ -35,4 +35,15 @@ export const MainTrend = ({ activeFilm }) => {
 			</div>
 		</div>
 	)
+}
+MainTrend.propTypes = {
+	activeFilm: PropTypes.shape({
+		title: PropTypes.string.isRequired,
+		image: PropTypes.string.isRequired,
+		year: PropTypes.number.isRequired,
+		genre: PropTypes.string.isRequired,
+		playback: PropTypes.string.isRequired,
+		description: PropTypes.string.isRequired,
+		star: PropTypes.number.isRequired
+	}).object
 }

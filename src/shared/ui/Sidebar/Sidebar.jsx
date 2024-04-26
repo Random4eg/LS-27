@@ -7,15 +7,10 @@ import { ComingIcon } from "../../icons/ComingIcon"
 import { ComunityIcon } from "../../icons/ComunityIcon"
 import { SocialIcon } from "../../icons/SocialIcon"
 import { SettingsIcon } from "../../icons/SettingsIcon"
-import { LogoutIcon } from "../../icons/LogoutIcon"
-import React, { useState } from 'react'
+import { LogoutIcon } from '../../icons/LogoutIcon'
+
 
 export const Sidebar = () => {
-	const [activeItem, setActiveItem] = useState(null)
-
-	const handleItemClick = itemName => {
-		setActiveItem(itemName)
-	}
 	return (
 		<div className='sidebar'>
 			<LogoIcon />
